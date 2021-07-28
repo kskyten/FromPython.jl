@@ -1,0 +1,16 @@
+name = "FromPython"
+uuid = "43cec31a-7359-4a83-a6d6-343d53e86afd"
+authors = ["Kusti Skytén"]
+version = "0.1.0"
+
+[deps]
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
