@@ -731,59 +731,28 @@ function Div(ctx::Type{Expr}, obj::PyObject)
     :/
 end
 
-"""
-Mod()
-"""
-function Mod(ctx)
-    @error "Translation for Mod has not been implemented."
+function Mod(ctx::Type{Expr}, obj::PyObject)
+    :%
 end
 
-function Mod(ctx, obj::PyObject)
-    Mod(ctx)
+function Pow(ctx::Type{Expr}, obj::PyObject)
+    :^
 end
 
-"""
-Pow()
-"""
-function Pow(ctx)
-    @error "Translation for Pow has not been implemented."
+function LShift(ctx::Type{Expr}, obj::PyObject)
+    :<<
 end
 
-function Pow(ctx, obj::PyObject)
-    Pow(ctx)
+function RShift(ctx::Type{Expr}, obj::PyObject)
+    :>>
 end
 
-"""
-LShift()
-"""
-function LShift(ctx)
-    @error "Translation for LShift has not been implemented."
+function BitOr(ctx::Type{Expr}, obj::PyObject)
+    :|
 end
 
-function LShift(ctx, obj::PyObject)
-    LShift(ctx)
-end
-
-"""
-RShift()
-"""
-function RShift(ctx)
-    @error "Translation for RShift has not been implemented."
-end
-
-function RShift(ctx, obj::PyObject)
-    RShift(ctx)
-end
-
-"""
-BitOr()
-"""
-function BitOr(ctx)
-    @error "Translation for BitOr has not been implemented."
-end
-
-function BitOr(ctx, obj::PyObject)
-    BitOr(ctx)
+function BitAnd(ctx::Type{Expr}, obj::PyObject)
+    :&
 end
 
 """
@@ -795,17 +764,6 @@ end
 
 function BitXor(ctx, obj::PyObject)
     BitXor(ctx)
-end
-
-"""
-BitAnd()
-"""
-function BitAnd(ctx)
-    @error "Translation for BitAnd has not been implemented."
-end
-
-function BitAnd(ctx, obj::PyObject)
-    BitAnd(ctx)
 end
 
 """
